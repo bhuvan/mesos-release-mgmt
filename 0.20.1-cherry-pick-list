@@ -1,0 +1,65 @@
+9b58956 Added a Version class to stout.
+9b2bbba Fixed the flaky FaultToleranceTest.ReconcilePendingTasks.
+d6c1ef6 Fixed flaky MasterTest.LaunchDuplicateOfferTest.
+9a25f5e Pulled the log line in ZooKeeperTestServer::shutdownNetwork() to above the shutdown call. - When debugging zookeeper related tests it's often more useful to know when the tests is shutting down the ZK server to reason about the order of events. Otherwise client disconnections are often logged before this "shutdown" line and can be confusing.
+fcb8dcb Increased session timeouts for ZooKeeper related tests.
+60dd10c Added support for catching trailing white spaces in the style checker.
+eea12a6 Fixed trailing whitespace in libprocess.
+7095fc3 Fixed authorization tests to properly deal with registration retries.
+645adc6 Made sure IPv6 is disabled for port mapping network isolator.
+7dca9db Fixed command executor path check
+f2bcfc3 Fix git clean -xdf skipping leveldb, removes internal .git dirs from leveldb tarball via 'git archive --format=tar.gz --prefix=leveldb/ origin/master > leveldb.tar.gz'
+847060c Adds Qubit to PoweredByMesos list.
+e67a6a6 Fixed line comments end punctuation in libprocess.
+2170890 Fixed line comments end punctuation in stout.
+e736d03 Fixed line comments end punctuation in Mesos source.
+fd798ff Update deploy_dir from localstate to sysconf
+a82eff2 Updated the Mesos C++ Style Guide.
+63ed986 Added kill() to freezerTimedOut() in cgroups.cpp. This is a short-term fix for MESOS-1758.
+18d3957 Fix protobuf detection on systems with Python 3 as default
+08e3d9d Minor update to include package config file
+59e257f Improved the error message when destroying a container.
+803031d Fixed the memory limitation construction.
+27b6e87 Flattened the executor resoures when launching executors.
+b71dc72 Removed an unnecessarily introduced Option.
+789d9b4 Fixed a bug in the staging tasks metric.
+aa95ca5 Count pending tasks as staging in the slave.
+20afa5e Updated the container failed to launch error message in the slave.
+18344e0 Added Resources support to return the port range for the given number of ports.
+4749633 Added instructions for getting started with CentOS.
+902b8de Fixed a bug in the allocator which could cause filters to be unnecessarily installed.
+d0b375a Fixed MasterZooKeeperTest.LostZooKeeperCluster.
+dece99c Fail when no command provided with shell enabled in docker.
+e28858e Modifed execute cli to run docker images.
+0071a90 Fix External Containerizer creation.
+4f321cf Improved the signal handling comment in Mesos tests.
+6af5432 Fixed signal handling for Mesos.
+0386b6e Fixed signal handling in libprocess.
+1f695fa Fixed signal handling for stout.
+358901a Replaced PKG_CHECK_MODULES with AC_CHECKs in libprocess configure.ac.
+66ecc37 Replaced PKG_CHECK_MODULES with AC_CHECKs in configure.ac.
+aff24fb Removed duplicate headers imports
+b5b2735 Minor style fixes from: https://reviews.apache.org/r/24407/
+a56be86 Use curl-config to locate lib curl when possible
+9f51e52 Fixed timed_tests.sh script to preserve exit status of the test.
+1ebe214 Added logging when master/slaves/frameworks bind to loopback address.
+7de2750 Adjustments for new JSON streaming.
+73da21e Refactored the JSON output streaming.
+d5bbc35 Log the uid and pid when receiving a SIGTERM.
+d45c796 Fixed MesosContainerizer to reject tasks that have ContainerInfo set.
+e148e52 Fixed the build error in routing tests.
+a176152 Adds Oscar Insurance and Squarespace to PoweredByMesos page.
+a14f8f7 Adds link to Authorization doc in documentation home, and updates punctuation to be consistent.
+9a0a850 Updates latest version number in Getting Started documentation, and updates index of documentation files to reference recently-added docs.
+b80482c Allow multiple colons for docker image.
+9e68e98 MESOS-1208: Add -Wno-unused-local-typedefs if gcc version is >= 4.8
+70784a9 Report bind parameters on failure.
+d7212c9 Fixed "registered" value in slave's /stats.json.
+4190110 Fixed help string for "--attributes" flag.
+8575e0b Enabled glog signal handler for stout tests.
+6172bdd Enabled glog signal handler for libprocess tests.
+0e180b8 Enabled glog signal handler for mesos tests.
+f7b5f5b Fixed a bug in docker/docker.cpp that causes unresolved symbols on OSX.
+dd80646 Updated the CHANGELOG and upgrades documents for MESOS-1409.
+460e6d3 Added HTTP endpoint changes and deprecations to CHANGELOG for 0.20.0.
+19e7423 Updated configure.ac to 0.21.0.
